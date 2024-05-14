@@ -6,7 +6,7 @@ class Personagem:
         #Carregar a imagem do personagem.
         self.imagem = pygame.image.load(arquivo_imagem)
         #Estrutura da largura e altura da imagem.
-        self.lergura = largura_imagem
+        self.largura = largura_imagem
         self.altura = altura_imagem
         #Criação de como vai aparecer a imagem personagem.
         self.imagem = pygame.transform.scale(self.imagem,(self.largura,self.altura))
@@ -22,15 +22,15 @@ class Personagem:
     def desenhar(self,tela):
         tela.blit(self.imagem,(self.pos_x,self.pos_y))
     #Movimento das teclas
-    def mota_via_controle(self,direita,esquerda):
+    def mova_via_controle(self,direita,esquerda):
         #Controle de teclas
         teclas = pygame.key.get_pressed()
         #Coordenadas da tecla esquerda
         if teclas[esquerda]:
             if self.pos_x > 0:
-                self.pos_x = self.pos_x - 5
+                self.pos_x = self.pos_x - 1
         
         if teclas[direita]:
             if self.pos_x < 800 - self.largura:
-                self.pos_x = self.pos_x + 5
+                self.pos_x = self.pos_x + 1
 
