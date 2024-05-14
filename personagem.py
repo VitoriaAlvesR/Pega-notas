@@ -18,6 +18,10 @@ class Personagem:
         #Pontuação do personagem.
         self.pontuacao = 0
 
+    #Comando para aparecer o personagem na tela
+    def desenhar(self,tela):
+        tela.blit(self.imagem,(self.pos_x,self.pos_y))
+    #Movimento das teclas
     def mota_via_controle(self,direita,esquerda):
         #Controle de teclas
         teclas = pygame.key.get_pressed()
