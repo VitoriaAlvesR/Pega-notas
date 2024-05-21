@@ -33,6 +33,8 @@ while rodando:
     jogador1.mova_via_controle(pygame.K_d,pygame.K_a)
     jogador1.desenhar(tela)
     
+
+    
     #Configurando o primeiro obstáculo para ter pontuação
     nota_semibreve.movimenta()
     nota_semibreve.desenhar(tela)
